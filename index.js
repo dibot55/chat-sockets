@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const http = require('http');
+const path = require('path');
 const server = http.createServer(app);
 
 // declarar socket.io tiene que ser siempre "S"erver con mayuscula
@@ -33,7 +34,10 @@ io.on('connection', (socket)=>{ //socket de ida, cada vez que se usa el io.on cr
     });
 });
 
+// Archivos estaticos
+app.use(express.static(path.join(__dirname, "public")));
+
 //host
-server.listen(8080, () => {
+server.listen(3000, () => {
     console.log("Escuchando en el puerto: 8080");
 });

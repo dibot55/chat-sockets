@@ -4,73 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="./index.css">
     <title>Sockets chat</title>
-    <style>
-
-body{
-    background-color: #333;
-    margin: 0;
-    padding-bottom: 3rem;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    };
-
-#form{
-    background: rgba(0, 0, 0, 0.151);
-    padding: 0.25rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    height: 3rem;
-    box-sizing: border-box;
-    backdrop-filter: blur(10px);
-};
-
-#input{
-    border: none;
-    padding: 0 1rem;
-    flex-grow: 1; /*que se estire un poco*/
-    border-radius: 2rem;
-    margin: 0.25rem;
-};
-
-input:focus{
-    outline: none; /*quita la linea parpadeando con la que escribimos*/
-};
-
-#mensajes{
-    list-style-type: none; /*quita el puntito de la biñeta*/
-    margin: 0;
-    padding: 0;
-};
-
-#mensajes > li {
-    padding: 0.5rem 1rem;
-};
-
-#mensajes > li:nth-child(odd) {
-    background: #efefef;
-};
-
-#form > button {
-    background: #efefef;
-    border: none;
-    padding: 0 1rem;
-    margin: 0.25;
-    border-radius: 3px;
-    outline: none;
-    color: #333;
-};
-
-    </style>
 </head>
 <body id="body">
     <ul id="mensajes"></ul>
     <form id="form" action="">
-        <input id="input" type="text" autocomplete="off">
-        <button>Enviar</button>
+        <input id="input" type="text" class="inputtext" autocomplete="off">
+        <button class="button-2">Enviar</button>
     </form>
     <!--el /socket.io/socket.io.js sale de los node_modules-->
     <script src="/socket.io/socket.io.js"></script>
